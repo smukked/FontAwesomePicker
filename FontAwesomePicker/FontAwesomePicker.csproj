@@ -31,7 +31,7 @@
     <Content Include="Scripts\fontAwsomePicker.js.map" />
     <Content Include="Scripts\fontAwsomePicker.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="index.html" />
+    <Content Include="Demo\index.html" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Styles\bundle.css" />
     <Content Include="web.config" />
