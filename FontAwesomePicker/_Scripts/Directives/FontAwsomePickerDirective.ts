@@ -1,4 +1,4 @@
-﻿module ProActive.SharePoint.IntraActive.Directives {
+﻿module DES.Directives {
     export function FontAwsomePickerDirective() {
         return {
             restrict: 'A',
@@ -11,12 +11,12 @@
                     return str.match(suffix + "$") == suffix;
                 }
 
-                var faStyleSheet = <string>attrs['faStyleSheet'];
+                var faStyleSheet = <string>attrs['fontAwsomePicker'];
                 var faStyle = <string>attrs['value'];
                 var iconSelected = false;
-                var tmpLabel: string;
-
-                $scope.fontAwsome = new Models.FontAwsomeModel(faStyle.replace('fa-', ''), faStyle);
+                
+                $scope.fontAwsome = new Models.FontAwsomeModel(faStyle.replace('fa-', ''), '');
+                $scope.fontAwsomeSelected = new Models.FontAwsomeModel(faStyle.replace('fa-', ''), faStyle);
                 $scope.fontAwsomeListVisible = false;
                 $scope.fontAwsomeList = [];
 
@@ -43,15 +43,17 @@
                 $scope.selectIcon = (fontAwsome: Models.FontAwsomeModel) => {
                     $scope.fontAwsomeListVisible = false;
                     iconSelected = true;
-                    $scope.fontAwsome = fontAwsome;
+                    $scope.fontAwsomeSelected = angular.copy(fontAwsome);
+                    $scope.fontAwsome.label = fontAwsome.label;
                 }
 
                 $scope.showList = () => {
                     if (!$scope.fontAwsomeListVisible) {
-                        tmpLabel = $scope.fontAwsome.label;
                         $scope.fontAwsome.label = '';
+                        $scope.fontAwsome.selector = '';
+                      
                     } else {
-                        $scope.fontAwsome.label = tmpLabel;
+                        $scope.fontAwsome.label = $scope.fontAwsomeSelected.label;
                         iconSelected = true;
                     }
                     $scope.fontAwsomeListVisible = !$scope.fontAwsomeListVisible;

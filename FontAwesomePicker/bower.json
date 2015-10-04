@@ -3,7 +3,6 @@
   "private": true,
   "dependencies": {
     "angular": "^1.4.7",
-    "jQuery": "^1.9",
     "fontawesome": "*"
   }
 }

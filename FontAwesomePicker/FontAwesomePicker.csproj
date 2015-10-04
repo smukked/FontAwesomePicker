@@ -22,23 +22,18 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Styles\app.css" />
+    <Content Include="gulpfile.js" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="_Scripts\Modeles\FontAwsomeModel.ts" />
     <TypeScriptCompile Include="_Scripts\Views\FontAwsomePickerView.ts" />
     <TypeScriptCompile Include="_Scripts\_references.ts" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\fontAwsomePicker.js.map" />
-    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\fontAwsomePicker.js" />
-    <Content Include="Scripts\jquery-2.1.4.js" />
-    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="index.html" />
-    <Content Include="Styles\font-awesome.css" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Styles\bundle.css" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +56,10 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="package.json" />
+    <Content Include="_Styles\FontAwsomePicker.less" />
+    <Content Include="_Styles\app.less" />
+    <Content Include="_Styles\font-awesome.less" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -69,6 +67,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
